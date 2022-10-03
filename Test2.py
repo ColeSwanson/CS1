@@ -40,5 +40,22 @@ def squishIt(S, target):
     location = S.find(target)
     return(S[:location] + S[location+targetLength:])
 
-def fingerprint(w, alpha=printable[10:36]):
- return(tuple(set(sorted(set(w.lower())))&set(alpha)))
+#def fingerprint(w, alpha=printable[10:36]):
+ #return(tuple(set(sorted(set(w.lower())))&set(alpha)))
+
+#factorial recursion example
+def factorial(n):
+    if n ==0:
+        return(1)
+    return(n * (n-1))
+
+#recursive palidrome example(Not working)
+def palindrome(s):
+    if len(s) < 2:
+        return(True)
+    elif s[0] != s[-1]:
+        return(False)
+    else:
+        return(palindrome(s[1:-1]))
+
+

@@ -69,5 +69,12 @@ def sum(L):
         return(0)
     return(L[0] + sum(L[1:]))
 
+#return dictionary of string with word as key and dictionary of vowel as key and number of apearances as key value, as key value
 def countVowels(S, vowels='aeiou'):
     return{word.lower():{v:word.lower().count(v) for v in set(vowels) if word.lower().count(v) > 0} for word in S.split()}
+
+#recursion example(factorial)
+def factorial(n):
+    if n == []:
+        return(1)
+    return(n * factorial(n-1))
